@@ -1,24 +1,15 @@
 #!/usr/bin/env bash
-#
-# katharinegillis/node ellipsis package
 
-# The following hooks can be defined to customize behavior of your package:
-# pkg.install() {
-#     fs.link_files $PKG_PATH
-# }
+pkg.install() {
+    pkg.pull
+}
 
-# pkg.push() {
-#     git.push
-# }
+pkg.pull() {
+    echo -e "\e[32mUpdating node...\e[0m"
 
-# pkg.pull() {
-#     git.pull
-# }
+    docker pull node:lts
 
-# pkg.installed() {
-#     git.status
-# }
-#
-# pkg.status() {
-#     git.diffstat
-# }
+    fs.link_files $PKG_PATH/files
+
+    echo -e "\e[32mDone node.\e[0m"
+}
