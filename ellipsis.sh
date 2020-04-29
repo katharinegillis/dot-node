@@ -1,15 +1,24 @@
 #!/usr/bin/env bash
 
+pkg.link() {
+    fs.link_files $PKG_PATH/files
+}
+
 pkg.install() {
-    pkg.pull
+    # Set up node
+    bash $PKG_PATH/run.sh "$ELLIPSIS_SRC"
 }
 
 pkg.pull() {
-    echo -e "\e[32mUpdating node...\e[0m"
+    # Unlink old files
+    hooks.unlink
 
-    docker pull node:lts
+    # Pull changes from git
+    git.pull
 
-    fs.link_files $PKG_PATH/files
+    # Link new files
+    pkg.link
 
-    echo -e "\e[32mDone node.\e[0m"
+    # Set up node
+    bash $PKG_PATH/run.sh "$ELLIPSIS_SRC"
 }
