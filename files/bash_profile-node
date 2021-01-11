@@ -8,3 +8,5 @@ alias dnpx="docker run --rm -it --name node -v \$PWD:/app -w /app node:lts npx"
 
 alias npm="dnpm"
 alias npx="dnpx"
+alias node="dnode"
+alias yarn="dyarn"
