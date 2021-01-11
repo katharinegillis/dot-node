@@ -4,7 +4,7 @@
 alias dnode="docker run --rm -it --name node -v \$PWD:/app -w /app node:lts node"
 alias dnpm="docker run --rm -it --name node -v \$PWD:/app -w /app node:lts npm"
 alias dyarn="docker run --rm -it --name node -v \$PWD:/app -w /app node:lts yarn"
-alias dnpx="docker run --rm it --name node -v \$PWD:/app -w /app node:lts npx"
+alias dnpx="docker run --rm -it --name node -v \$PWD:/app -w /app node:lts npx"
 
 alias npm="dnpm"
 alias npx="dnpx"
