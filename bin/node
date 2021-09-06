@@ -7,4 +7,4 @@ then
   TERMINAL_OPTIONS="${TERMINAL_OPTIONS}t"
 fi
 
-docker run --rm "$TERMINAL_OPTIONS" -v "$PWD:/app" -w /app node:lts node "$@"
+docker run --rm "$TERMINAL_OPTIONS" -v "$PWD:/app" -w /app --user $(id -u):$(id -g) node:lts node "$@"
