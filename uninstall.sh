@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
 
-# Remove node docker image
-docker image rm node:lts
+# Remove node using apt
+sudo apt remove nodejs
+
+# Remove yarn using apt
+sudo apt remove yarn

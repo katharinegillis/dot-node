@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
 
-# Pull latest node docker image
-docker pull node:lts
+# Update node using apt
+sudo apt install nodejs
+
+# Update yarn using apt
+sudo apt install yarn
