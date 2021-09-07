@@ -8,7 +8,7 @@ sudo bash nodesource_setup.sh
 rm -rf nodesource_setup.sh
 
 # Install node
-sudo apt install nodejs
+sudo apt install nodejs -y
 
 # Install yarn
-sudo apt install yarn
+sudo apt install yarn -y
