@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 
-# Remove node using apt
-sudo apt remove nodejs -y
+SYSTEM=$3
 
-# Remove yarn using apt
-sudo apt remove yarn -y
+if [ "$SYSTEM" != "mac" ]; then
+    # Remove node using apt
+    sudo apt remove nodejs -y
+
+    # Remove yarn using apt
+    sudo apt remove yarn -y
+fi

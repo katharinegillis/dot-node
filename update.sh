@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 
-# Update node using apt
-sudo apt install nodejs -y
+SYSTEM=$3
 
-# Update yarn using apt
-sudo apt install yarn -y
+if [ "$SYSTEM" != "mac" ]; then
+    # Update node using apt
+    sudo apt install nodejs -y
+
+    # Update yarn using apt
+    sudo apt install yarn -y
+fi
