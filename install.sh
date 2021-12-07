@@ -15,4 +15,8 @@ if [ "$SYSTEM" != "mac" ]; then
 
     # Install yarn
     sudo apt install yarn -y
+else
+    # Set up to use nvm
+    brew install nvm
+    mkdir ~/.nvm
 fi
