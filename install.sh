@@ -19,4 +19,9 @@ else
     # Set up to use nvm
     brew install nvm
     mkdir ~/.nvm
+
+    nvm install "$NODE_VERSION"
+
+    # Install yarn
+    npm install -g corepack
 fi
