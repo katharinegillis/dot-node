@@ -18,11 +18,11 @@ if [ "$SYSTEM" != "mac" ]; then
 else
     # Set up to use nvm
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-    export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+    export NVM_DIR="$HOME/.nvm"
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
-    nvm install "$NODE_VERSION"
+    #nvm install "$NODE_VERSION"
 
     # Install yarn
-    npm install -g corepack
+    #npm install -g corepack
 fi
