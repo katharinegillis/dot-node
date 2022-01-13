@@ -21,8 +21,8 @@ else
     export NVM_DIR="$HOME/.nvm"
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
-    #nvm install "$NODE_VERSION"
+    nvm install "$NODE_VERSION"
 
     # Install yarn
-    #npm install -g corepack
+    nvm use "$NODE_VERSION" npm install -g corepack
 fi
