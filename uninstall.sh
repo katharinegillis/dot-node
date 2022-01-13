@@ -9,12 +9,8 @@ if [ "$SYSTEM" != "mac" ]; then
     # Remove yarn using apt
     sudo apt remove yarn -y
 else
-    source ~/.nvm/nvm.sh
-    nvm deactivate
-    for v in $(nvm_ls); do nvm uninstall $v; done
-    rm -rf "$NVM_DIR"
-    rm -rf "$HOME/.npm"
-    rm -rf "$HOME/.node"
-    rm -rf "$HOME/.npmrc"
-    rm -rf "$HOME/.yarnrc"
+    brew uninstall nvm
+    rm -rf ~/.nvm
+    rm -rf ~/.node
+    rm -rf ~/.npm
 fi
