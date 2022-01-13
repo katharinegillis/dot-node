@@ -13,4 +13,7 @@ else
     nvm deactivate
     for v in $(nvm_ls); do nvm uninstall $v; done
     rm -rf "$NVM_DIR"
+    rm -rf "$HOME/.npm"
+    rm -rf "$HOME/.node"
+    rm -rf "$HOME/.npmrc"
 fi
