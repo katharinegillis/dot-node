@@ -16,4 +16,5 @@ else
     rm -rf "$HOME/.npm"
     rm -rf "$HOME/.node"
     rm -rf "$HOME/.npmrc"
+    rm -rf "$HOME/.yarnrc"
 fi
