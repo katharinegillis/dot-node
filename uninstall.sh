@@ -9,6 +9,5 @@ if [ "$SYSTEM" != "mac" ]; then
     # Remove yarn using apt
     sudo apt remove yarn -y
 else
-    brew uninstall nvm
-    rm -rf ~/.nvm
+    rm -rf "$NVM_DIR"
 fi
