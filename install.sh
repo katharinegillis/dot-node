@@ -24,5 +24,5 @@ else
     nvm install "$NODE_VERSION"
 
     # Install yarn
-    nvm install corepack
+    npm install -g corepack
 fi
