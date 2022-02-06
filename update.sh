@@ -9,7 +9,7 @@ if [ "$SYSTEM" != "mac" ]; then
     # Update yarn using apt
     sudo apt install yarn -y
 else
-    nvm update
+    brew update node
 
     npm update -g corepack
 fi
