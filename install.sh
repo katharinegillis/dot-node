@@ -17,7 +17,7 @@ if [ "$SYSTEM" != "mac" ]; then
     sudo apt install yarn -y
 else
     # Set up
-    curl "https://nodejs.org/dist/latest/node-${NODE_VERSION:-$(wget -qO- https://nodejs.org/dist/latest/ | sed -nE 's|.*>node-(.*)\.pkg</a>.*|\1|p')}.pkg" > "$HOME/Downloads/node-latest.pkg" && sudo installer -store -pkg "$HOME/Downloads/node-latest.pkg" -target "/"
+    brew install node@"$NODE_VERSION"
 
     # Install yarn
     npm install -g corepack
