@@ -9,5 +9,5 @@ if [ "$SYSTEM" != "mac" ]; then
     # Remove yarn using apt
     sudo apt remove yarn -y
 else
-    brew uninstall node
+    brew uninstall node@"$NODE_SETUP_VERSION"
 fi

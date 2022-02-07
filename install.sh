@@ -18,7 +18,7 @@ if [ "$SYSTEM" != "mac" ]; then
 else
     # Set up
     brew install node@"$NODE_SETUP_VERSION"
-    brew link node
+    brew link node@"$NODE_SETUP_VERSION"
 
     # Install yarn
     npm install -g corepack
