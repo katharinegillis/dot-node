@@ -1,13 +1,7 @@
 #!/usr/bin/env bash
 
-SYSTEM=$3
+# Remove node using apt
+sudo apt remove nodejs -y
 
-if [ "$SYSTEM" != "mac" ]; then
-    # Remove node using apt
-    sudo apt remove nodejs -y
-
-    # Remove yarn using apt
-    sudo apt remove yarn -y
-else
-    brew uninstall node@"$NODE_SETUP_VERSION"
-fi
+# Remove yarn using apt
+sudo apt remove yarn -y
